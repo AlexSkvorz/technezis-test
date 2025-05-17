@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "test-exc"
+version = "0.1.0"
+description = ""
+authors = ["AlexSkvorz <alexskvorz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.20.0.post0"
+sqlalchemy = "^2.0.41"
+python-dotenv = "^1.1.0"
+pre-commit = "^4.2.0"
+ruff = "^0.11.10"
+alembic = "^1.15.2"
+aiosqlite = "^0.21.0"
+greenlet = "^3.2.2"
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py312"
+exclude = ["alembic"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+extend-select = [
+    "E",
+    "C",
+    "F",
+    "I",
+    "N",
+    "UP",
+    "TRY",
+    "FURB",
+    "PLW",
+    "C4",
+    "B",
+    "RSE",
+    "SIM",
+    "C90",
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 6
+
